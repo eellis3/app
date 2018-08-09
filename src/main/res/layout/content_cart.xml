@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_cart"
+    tools:context="edu.gatech.seclass.scm.activities.CartActivity">
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:id="@+id/cartList"></ListView>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/cartList"
+        android:id="@+id/cartListDivider"></RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/totalBeforeLabel"
+        android:text="Total Before:"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/cartListDivider"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cartListDivider"
+        android:layout_toRightOf="@+id/totalBeforeLabel"
+        android:id="@+id/totalBeforeValue"
+        android:text=""
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/goldDiscountLabel"
+        android:text="Gold Discount:"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/totalBeforeLabel"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalBeforeValue"
+        android:layout_toRightOf="@+id/goldDiscountLabel"
+        android:id="@+id/goldPercentValue"
+        android:text=""
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/creditAvailableLabel"
+        android:text="Credit Available:"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/goldDiscountLabel"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goldDiscountLabel"
+        android:layout_toRightOf="@+id/creditAvailableLabel"
+        android:id="@+id/creditAvailableValue"
+        android:text=""
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/finalTotalLabel"
+        android:text="Final Total:"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/creditAvailableLabel"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/creditAvailableLabel"
+        android:layout_toRightOf="@+id/finalTotalLabel"
+        android:id="@+id/finalTotalValue"
+        android:text=""
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finalTotalLabel"
+        android:layout_centerHorizontal="true"
+        android:text="Purchase"
+        android:id="@+id/purchaseButton"/>
+
+
+
+</RelativeLayout>

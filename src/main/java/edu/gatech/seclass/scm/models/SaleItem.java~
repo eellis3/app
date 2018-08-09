@@ -1,0 +1,66 @@
+package edu.gatech.seclass.scm.models;
+
+/**
+ * Created by anoth on 10/24/2015.
+ */
+public class SaleItem {
+
+    private long mId;
+    private int mSizeId;
+    private int mPurchaseId;
+    private int mSmoothieTypeId;
+    private double mItemPrice;
+    private double mBasePrice = 2.99;
+
+    // TODO: Item price needs to be calculated somewhere.  Activities currently call the getItemPrice method of this class and assume it updates as the other attributes update
+
+    public SaleItem() {
+
+    }
+
+    public SaleItem(int id) {
+        this.mId = id;
+    }
+
+    public void setID(long id) {
+        this.mId = id;
+    }
+
+    public long getID() {
+        return this.mId;
+    }
+
+    public int getmSmoothieTypeId() {
+        return mSmoothieTypeId;
+    }
+
+    public void setmSmoothieTypeId(int mSmoothieTypeId) {
+        this.mSmoothieTypeId = mSmoothieTypeId;
+    }
+
+    public int getmSizeId() {
+        return mSizeId;
+    }
+
+    public void setmSizeId(int mSizeId) {
+        this.mSizeId = mSizeId;
+    }
+
+    public int getmPurchaseId() {
+        return mPurchaseId;
+    }
+
+    public void setmPurchaseId(int mPurchaseId) {
+        this.mPurchaseId = mPurchaseId;
+    }
+
+    public double getItemPrice() {
+        return mBasePrice + getmSizeId();
+    }
+
+    public void setItemPrice(double itemPrice) {
+        this.mItemPrice = itemPrice;
+    }
+
+}
+

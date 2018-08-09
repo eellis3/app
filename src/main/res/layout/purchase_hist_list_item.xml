@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:text="Date: "
+            android:id="@+id/dateLabel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@id/dateLabel"
+            android:text="9/27/15"
+            android:gravity="center_vertical"
+            android:id="@+id/purchaseDate"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/dateLabel"
+            android:text="Amount Before Discounts: "
+            android:id="@+id/amountLabel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@id/amountLabel"
+            android:layout_below="@+id/dateLabel"
+            android:text="$100"
+            android:gravity="center_vertical"
+            android:id="@+id/purchaseAmount"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/purchaseAmount"
+            android:text="Gold Credit Applied:"
+            android:layout_marginRight="10dp"
+            android:id="@+id/goldStatus"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/purchaseAmount"
+            android:text="No"
+            android:layout_toRightOf="@+id/goldStatus"
+            android:id="@+id/goldValue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/goldStatus"
+            android:text="Redeemed Credit: "
+            android:id="@+id/rewardAmountLabel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@id/rewardAmountLabel"
+            android:layout_below="@+id/goldStatus"
+            android:text="$100"
+            android:gravity="center_vertical"
+            android:id="@+id/rewardAmount"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/rewardAmount"
+            android:text="Final Purchase Amount: "
+            android:id="@+id/finalAmountLabel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="$1000"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/rewardAmount"
+            android:id="@+id/finalAmountValue"
+            android:layout_toRightOf="@+id/finalAmountLabel"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/finalAmountLabel"
+            android:background="@android:color/background_dark"
+            android:layout_marginRight="10dp"></RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
